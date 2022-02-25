@@ -32,14 +32,14 @@ class HumanClothesDecorator(Human):
         self.name = self._human_wrapper.name
 
     @property
-    def component(self) -> Human:
+    def wrapper(self) -> Human:
         """
         The Decorator delegates all work to the wrapped component.
         """
         return self._human_wrapper
 
     def get_clothes(self) -> str:
-        return f"Nice dressing clothes & {self.component.get_clothes()}"
+        return f"Nice dressing clothes & {self.wrapper.get_clothes()}"
 
 
 class HumanShoesDecorator(HumanClothesDecorator):
@@ -47,7 +47,7 @@ class HumanShoesDecorator(HumanClothesDecorator):
     Human shoes decorator
     """
     def get_clothes(self) -> str:
-        return f"Fancy shoes & {self.component.get_clothes()}"
+        return f"Fancy shoes & {self.wrapper.get_clothes()}"
 
 
 class HumanSocksDecorator(HumanClothesDecorator):
@@ -55,4 +55,4 @@ class HumanSocksDecorator(HumanClothesDecorator):
     Human socks decorator
     """
     def get_clothes(self) -> str:
-        return f"Fancy socks & {self.component.get_clothes()}"
+        return f"Fancy socks & {self.wrapper.get_clothes()}"
