@@ -4,6 +4,14 @@ from components.human import \
     HumanShoesDecorator, \
     HumanSocksDecorator
 
+from decorators.function_decorator import \
+    p_decorate
+
+
+@p_decorate
+def get_text(name):
+    return f"Hello, im here and my name is {name}"
+
 
 def get_human_clothing(human: Human):
     clothes_information = human.get_clothes()
@@ -23,3 +31,6 @@ if __name__ == '__main__':
 
     fully_dressed_human = HumanSocksDecorator(human_with_clothes_and_shoes)
     get_human_clothing(fully_dressed_human)
+
+    # Decoradores de funciones
+    # print(get_text("Diego Arango"))
