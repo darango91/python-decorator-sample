@@ -1,7 +1,7 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, ABCMeta, abstractmethod
 
 
-class Human:
+class Human(ABC):
     """
     Base abstract human class component
     """

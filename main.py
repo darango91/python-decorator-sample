@@ -4,13 +4,13 @@ from components.human import \
     HumanShoesDecorator, \
     HumanSocksDecorator
 
-from decorators.function_decorator import \
-    p_decorate
-
-
-@p_decorate
-def get_text(name):
-    return f"Hello, im here and my name is {name}"
+# from decorators.function_decorator import \
+#     p_decorate
+#
+#
+# @p_decorate
+# def get_text(name):
+#     return f"Hello, im here and my name is {name}"
 
 
 def get_human_clothing(human: Human):
