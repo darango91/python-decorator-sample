@@ -1,8 +1,5 @@
-from components.human import \
-    Human, YoungHuman, \
-    HumanClothesDecorator, \
-    HumanShoesDecorator, \
-    HumanSocksDecorator
+from components.human import Human, YoungHuman
+from decorators.human_decorator import HumanClothesDecorator, HumanShoesDecorator, HumanSocksDecorator
 
 # from decorators.function_decorator import \
 #     p_decorate
